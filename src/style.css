@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+    .size-selector input:checked + label{
+        @apply bg-primary text-white;
+    }
+}
+
+@layer base {
+    body{
+        @apply font-poppins
+    }
+    h1,h2,h3,h4,h5,h6{
+        @apply font-roboto
+    }
+}
+
+@layer utilities {
+   
+    [type='checkbox']:focus,[type='radio']:focus{
+ 
+        --tw-ring-offset-color: #fff;
+        --tw-ring-color: #fff;
+       
+      }
+      [type='text']:focus, input:where(:not([type])):focus, [type='email']:focus, [type='url']:focus, [type='password']:focus, [type='number']:focus, [type='date']:focus, [type='datetime-local']:focus, [type='month']:focus, [type='search']:focus, [type='tel']:focus, [type='time']:focus, [type='week']:focus, [multiple]:focus, textarea:focus, select:focus{
+ 
+        --tw-ring-offset-color: #fff;
+        --tw-ring-color: #fff;
+      
+        border-color: #FD3D57;
+      }
+      [type='checkbox'],[type='radio']{
+        
+        height: 0rem;
+        width: 0rem;
+        color: #fff;
+        background-color: #fff;
+        border-color: #fff;
+        border-width: 0px;
+      }
+
+      input[type="radio"]:checked+label{
+        background-color: #FD3D57!important;
+        color: #fff;
+      }
+      /* .size-selector input:checked + label{
+        background-color: #FD3D57!important;
+        color: #fff;
+    } */
+    .color-selector input[type="radio"]:checked+label{
+      background-color: yellow !important;
+      color: #fff;
+    }
+}
+
